@@ -1,0 +1,61 @@
+/*
+ *  CLAVES IMPORTANTES:
+    !important - marca importancia del estilo
+    propiedad: inherit - hereda propiedad de la etiqueta HTML padre
+        no toda las propiedades se heredan de forma predeterminada (margin, padding)
+    propiedad: initial - ignora la herencia y restaura la propiedad a su valor predeterminado
+    propiedad: unset - restablece la propiedad a su valor heredado si se hereda por defecto, o al valor inicial si no
+*/
+
+
+p {
+    color: blue;
+}
+
+.class {
+    color: red;
+}
+
+#id {
+    color: yellow;
+}
+
+input[type="checkbox"] {
+    margin: 10px;
+}
+
+h1:hover {
+    color: white;
+}
+
+input:focus {
+    border-color:blue;
+}
+
+li:nth-child(odd) {
+    background-color: lightgrey;
+}
+
+div p {
+    /* Selecciona los elementos p dentro de div */
+}
+
+ul > li {
+    /* Selecciona los elementos li inmediatamente hijos de ul */
+}
+
+h2 + p {
+    /* Hermano adyacente: primer elemento p que siga inmediatamente a h2 */
+}
+
+h2 ~ p {
+    /* Hermano general: todos los elementos p que vengan detrás de h2 */
+}
+
+
+
+/*
+ *  BIBLIOGRAFÍA::after
+        - CodePen
+        - CSS Zen Garden
+*/

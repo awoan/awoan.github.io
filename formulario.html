@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+
+<! Dentro de los formularios tenemos varias opciones:>
+<! action="submit.php", es el script o una página capaz de procesar la info>
+<! method="GET" -- poco seguro, los datos se adjuntan a la URL y son visibles>
+<! method="POST" -- los datos se envían en el cuerpo de la solicitud y no son visibles en la URL>
+
+
+<body>
+    <form action="" method="POST">
+        <! Hay dos tipos básicos de campo: label e input>
+        <! Podemos incluir un label for="nombre" que se asocie al id del input:>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <! O podemos meter el input dentro del label:>
+        <label>Contraseña:
+            <input type="password" name="contrasena">
+        </label>
+
+        <! Aparte de "text" y "password" hay otros tipos de input: los checkbox y los radio>
+        <! Los checkbox se pueden seleccionar más de uno al mismo tiempo>
+
+        <label>
+            <input type="checkbox" name="interes" value="musica">
+            Música
+        </label>
+        <label>
+            <input type="checkbox" name="interes" value="libros">
+            Libros
+        </label>
+
+        <! En los radio solo se puede seleccionar uno>
+
+        <label>
+            <input type="radio" name="genero" value="masculino">
+            Masculino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="femenino">
+            Femenino
+        </label>
+        <label>
+            <input type="radio" name="genero" value="nobinario">
+            No binario
+        </label>
+
+        <! También tenemos las listas desplegables:>
+
+        <label for="pais">País:</label>
+        <select id="pais" name="pais">
+            <option value="">Seleccione un país...</option>
+            <option value="espana">España</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+        </select>
+
+        <! Y las áreas de texto:>
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="5" cols="50">
+            Escribe algo aquí...
+        </textarea>
+
+        <! Aparte, podemos agrupar según conjunto de campos mediante fieldset y legend>
+
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </fieldset>
+
+        <! Por último, tenemos el botón de submit y el de resetear:>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+    </form>
+</body>
+
+<! BIBLIOGRAFÍA: Algunas páginas web interesantes:>
+<! JotForm: creador de formularios HTML sin codificar>
+<! W3C Markup Validation Service: servicio gratuito para comprobar validez del marcado de formularios y páginas HTML>
