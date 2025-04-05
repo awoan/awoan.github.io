@@ -1,11 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Pruebas</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <h1>¡Hola, mundo!</h1>
-        <p>Mi primera página web</p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta de presentación</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: monospace;
+            margin: 0;
+        }
+
+        main h1 {
+            margin:40px;
+        }
+
+        .tarjeta {
+
+            /*Estos atributos no se heredan por defecto*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 90%;
+            max-width: 400px;
+            background-color: #fff;
+            box-shadow: -1px 0px 16px 1px rgba(0,0,0,0.61);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .tarjeta h2 {
+            margin: 16px 0 8px;
+        }
+
+        .tarjeta p {
+            margin: 0 0 16px;
+            text-align: center;
+            padding: 0 10px;
+        }
+
+        .boton-contenedor {
+            /*Estos atributos no se heredan por defecto*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            background-color: black;
+        }
+
+        .boton {
+            padding: 10px;
+            background-color: black;
+            color: white;
+
+            /*Pone el cursor como si estuviera señalando un botón*/
+            cursor: pointer;
+
+            border-top: 1px solid white;
+            border-left: 1px solid white;
+            font-size:small;
+        }
+
+        .boton:hover,
+        .boton:focus {
+
+            /*Elimina el contorno que el navegador añade automáticamente a un elemento cuando está enfocado*/
+            outline: none;
+
+            border-top: 0;
+            border-left: 0;
+            border-bottom: 1px solid white;
+            border-right: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Tarjeta de usuario</h1>
+        <article class="tarjeta" aria-label="Tarjeta de presentación de Alen">
+            <img src="http://www.blogerin.com/wp-content/uploads/2012/10/Fotos-tiernas-de-perritos-wallpapers-2.jpg" alt="Perrito pequeño tumbado">
+            <h2>Hola, soy Alen</h2>
+            <p>Soy médico, programador y escritor.</p>
+            <div class="boton-contenedor">
+                <button class="boton" aria-label="Leer más sobre Alen">Leer más</button>
+            </div>
+        </article>
+    </main>
+</body>
 </html>
