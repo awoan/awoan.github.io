@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tipos de posicionamiento</title>
+        <meta charset="UTF-8">
+        <style>
+
+            body {
+                display:flex;
+                gap:200px;
+                flex-direction:column;
+                justify-content:center;
+
+                height:200vh;
+            }   
+
+            .contenedor {
+                display:flex;
+                gap:30px;
+                flex-direction:row;
+                justify-content:center;
+            }
+
+            /* Cajas 1, 2 y 3 tienen posicionamiento relative */
+
+            #caja1 {
+                position:relative;
+                right:100px;
+                background-color: pink;
+            }
+        
+            #caja2 {
+                position:relative;
+                top:100px;
+                background-color: lightblue;
+            }
+
+            #caja3 {
+                position:relative;
+                left:100px;
+                background-color: lightgreen;
+            }
+
+            /* Cajas 4, 5 y 6 tienen posicionamiento absoluto */
+
+            #caja4 {
+                position:absolute;
+                left:100px;
+                top:250px;
+                background-color: hotpink;
+            }
+
+            #caja5 {
+                position:absolute;
+                left:50%;
+                top:250px;
+                background-color:blueviolet;
+            }
+
+            #caja6 {
+                position:absolute;
+                right:100px;
+                top:250px;
+                background-color:brown;
+            }
+
+            /* Cajas 7, 8 y 9 tienen posicionamiento fixed */
+
+            #contenedor3 > div:nth-child(1) {
+                position:fixed;
+                top:50%;
+                left:25%;
+                background-color:green;
+            }
+
+            #contenedor3 > div:nth-child(2) {
+                position:fixed;
+                top:50%;
+                left:50%;
+                background-color:blue;
+            }
+
+            #contenedor3 > div:nth-child(3) {
+                position:fixed;
+                top:50%;
+                left:75%;
+                background-color:yellow;
+            }
+
+            /* No consigo que funcione sticky. Así que lo dejamos así */
+
+
+        </style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div id="caja1">
+                <p>Caja 1</p>
+            </div>
+            <div id="caja2">
+                <p>Caja 2</p>
+            </div>
+            <div id="caja3">
+                <p>Caja 3</p>
+            </div>
+        </div>
+        <div class="contenedor">
+            <div id="caja4">
+                <p>Caja 4</p>
+            </div>
+            <div id="caja5">
+                <p>Caja 5</p>
+            </div>
+            <div id="caja6">
+                <p>Caja 6</p>
+            </div>
+        </div>
+        <div class="contenedor" id="contenedor3">
+            <div>
+                <p>Caja 7</p>
+            </div>
+            <div>
+                <p>Caja 8</p>
+            </div>
+            <div>
+                <p>Caja 9</p>
+            </div>
+        </div>
+    </body>
+</html>
